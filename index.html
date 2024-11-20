@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERV Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ERV Music</h1>
+        <nav>
+            <a href="index.html">Musique</a>
+        </nav>
+    </header>
+    <main>
+        <div class="music-container">
+            <div class="music-list">
+                <h2>Mes morceaux</h2>
+                <div class="track" onclick="playSong('song1')">
+                    <img src="kkk.jpg" alt="Triple K" class="track-cover">
+                    <p>Triple K</p>
+                </div>
+                <div class="track" onclick="playSong('song2')">
+                    <img src="edv.jpg" alt="Échos de Vie" class="track-cover">
+                    <p>Échos de Vie</p>
+                </div>
+                <div class="track" onclick="playSong('song3')">
+                    <img src="bounce.jpg" alt="Bounce" class="track-cover">
+                    <p>Bounce</p>
+                </div>
+                <div class="track" onclick="playSong('song4')">
+                    <img src="jmm.jpg" alt="Je m'appelle Matthis" class="track-cover">
+                    <p>Je m'appelle Matthis</p>
+                </div>
+            </div>
+            <div class="music-details">
+                <h2>Détails de la chanson</h2>
+                <img id="cover" src="" alt="Pochette de l'album" />
+                <p id="title">Titre : </p>
+                <p id="description">Description : </p>
+                <p id="beatmaker">Beatmaker : </p>
+                <a id="download" href="#" download>
+                    <button>Télécharger</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="player-controls">
+        <div>
+            <p id="now-playing-title">Musique en cours</p>
+            <p id="current-time">00:00</p>
+            <progress id="progress-bar" value="0" max="100" onclick="seekAudio(event)"></progress>
+            <p id="duration">00:00</p>
+        </div>
+        <button id="play-pause-btn" onclick="togglePlayPause()">▶</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ERV. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

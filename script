@@ -1,0 +1,29 @@
+// Liste des détails des chansons
+const songs = {
+    song1: {
+        title: "Mon Premier Son",
+        description: "Un son incroyable qui démarre ma carrière.",
+        beatmaker: "DJ Cool",
+        lyrics: "Voici les paroles de la chanson...",
+        cover: "pochette1.jpg"
+    },
+    song2: {
+        title: "Mon Deuxième Son",
+        description: "Un hit à ne pas manquer !",
+        beatmaker: "DJ Hype",
+        lyrics: "Les paroles de ce morceau épique...",
+        cover: "pochette2.jpg"
+    }
+};
+
+// Affiche les détails d'une chanson
+function showDetails(songId) {
+    const song = songs[songId];
+    if (song) {
+        document.getElementById("cover").src = song.cover;
+        document.getElementById("title").innerText = `Titre : ${song.title}`;
+        document.getElementById("description").innerText = `Description : ${song.description}`;
+        document.getElementById("beatmaker").innerText = `Beatmaker : ${song.beatmaker}`;
+        document.getElementById("lyrics").innerText = `Paroles : ${song.lyrics}`;
+    }
+}

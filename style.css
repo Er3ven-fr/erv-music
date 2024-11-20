@@ -1,0 +1,113 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: #00f7ff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+.music-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.music-list {
+    width: 50%;
+}
+
+.music-list .track {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.music-list .track:hover {
+    background-color: #444;
+}
+
+.track-cover {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.music-details {
+    width: 40%;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.music-details img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.music-details p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Barre en bas */
+#player-controls {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+}
+
+#progress-bar {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #00f7ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00c7d7;
+}
