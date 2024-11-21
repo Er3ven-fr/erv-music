@@ -102,7 +102,7 @@ nav a:hover {
 
 button {
     padding: 10px;
-    background-color: #00f7ff;
+    background-color: #A82DAF;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -110,4 +110,102 @@ button {
 
 button:hover {
     background-color: #00c7d7;
+}
+/* Appliquer l'image de fond et le flou */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fde.jpg'); /* Image de fond */
+    background-size: cover; /* Adapter l'image à la taille de l'écran */
+    background-position: center;
+    filter: blur(50px); /* Appliquer un flou de 50% approximativement */
+    height: 100vh; /* Assurer que le fond couvre toute la page */
+    overflow: hidden; /* Empêcher le débordement si l'image est trop grande */
+}
+
+main {
+    position: relative; /* Positionner le contenu par-dessus le fond */
+    z-index: 1; /* Mettre le contenu au-dessus du fond flou */
+}
+
+/* S'assurer que le texte et le contenu sont bien visibles par-dessus le flou */
+body, header, .music-container {
+    filter: none; /* Désactiver le flou sur le contenu */
+}
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Conteneur de la barre d'écoute */
+.audio-bar {
+    position: fixed; /* Garde la barre en bas de la page */
+    bottom: 20px; /* Ajoute une marge du bas */
+    left: 50%; /* Centre la barre horizontalement */
+    transform: translateX(-50%); /* Ajuste pour être parfaitement centré */
+    width: 80%; /* Largeur de la barre */
+    max-width: 800px; /* Largeur maximale */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+    border-radius: 15px; /* Bords arrondis */
+    padding: 10px 20px; /* Padding pour l'intérieur de la barre */
+    display: flex;
+    align-items: center; /* Centrer verticalement les éléments */
+    justify-content: space-between; /* Espacement des éléments */
+    box-sizing: border-box;
+    z-index: 1000; /* Au-dessus du contenu */
+}
+
+/* Titre de la chanson */
+#now-playing-title {
+    flex: 1; /* Utilise tout l'espace disponible */
+    font-size: 1rem;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Bouton Play/Pause */
+#play-pause-btn {
+    background-color: transparent;
+    border: none;
+    color: #A82DAF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Barre de progression */
+#progress-bar {
+    width: 40%; /* Ajuste la largeur de la barre */
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 5px;
+    appearance: none;
+    height: 5px;
+    outline: none;
+}
+
+/* Temps de la chanson */
+#current-time, #duration {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    color: #fff;
+}
+
+/* Ajout d'un effet au survol de la barre */
+#progress-bar:hover {
+    background-color: #666;
 }
