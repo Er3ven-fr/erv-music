@@ -32,6 +32,13 @@ function playSong(song) {
             cover: "jmm.jpg",
             description: "Ptit troll pour Matthis.",
             beatmaker: "ERV"
+        },
+        song5: {
+            title: "OK",
+            src: "ok.mp3",
+            cover: "ok.jpg",
+            description: "S/O Jean Marie Bigard.",
+            beatmaker: "Valhak Beats"
         }
     };
 
