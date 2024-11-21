@@ -7,31 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>ERV Music</h1>
-        <nav>
-            <a href="index.html">Musique</a>
-        </nav>
-    </header>
     <main>
         <div class="music-container">
             <div class="music-list">
                 <h2>Mes morceaux</h2>
                 <div class="track" onclick="playSong('song1')">
                     <img src="kkk.jpg" alt="Triple K" class="track-cover">
-                    <p>Triple K</p>
+                    <p>Triple K : 1.03</p>
                 </div>
                 <div class="track" onclick="playSong('song2')">
                     <img src="edv.jpg" alt="Échos de Vie" class="track-cover">
-                    <p>Échos de Vie</p>
+                    <p>Échos de Vie Ft.Matt : 2.46</p>
                 </div>
                 <div class="track" onclick="playSong('song3')">
                     <img src="bounce.jpg" alt="Bounce" class="track-cover">
-                    <p>Bounce</p>
+                    <p>Bounce : 1.01</p>
                 </div>
                 <div class="track" onclick="playSong('song4')">
                     <img src="jmm.jpg" alt="Je m'appelle Matthis" class="track-cover">
-                    <p>Je m'appelle Matthis</p>
+                    <p>Je m'appelle Matthis : 1.45</p>
+                </div>
+                <div class="track" onclick="playSong('song5')">
+                    <img src="ok.jpg" alt="Ok" class="track-cover">
+                    <p>Ok : 2.16</p>
                 </div>
             </div>
             <div class="music-details">
@@ -47,20 +45,14 @@
         </div>
     </main>
 
-    <div id="player-controls">
-        <div>
-            <p id="now-playing-title">Musique en cours</p>
-            <p id="current-time">00:00</p>
-            <progress id="progress-bar" value="0" max="100" onclick="seekAudio(event)"></progress>
-            <p id="duration">00:00</p>
-        </div>
+<div class="audio-bar">
+    <div class="audio-container">
+        <div id="now-playing-title">Titre de la chanson</div>
         <button id="play-pause-btn" onclick="togglePlayPause()">▶</button>
+        <input type="range" id="progress-bar" value="0" max="100" step="0.1" onchange="seekAudio(event)">
+        <span id="current-time">00:00</span> / <span id="duration">00:00</span>
     </div>
-
-    <footer>
-        <p>&copy; 2024 ERV. Tous droits réservés.</p>
-    </footer>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>
